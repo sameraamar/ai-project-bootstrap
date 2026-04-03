@@ -44,6 +44,13 @@ Generate the following documentation‑first structure:
 .github/
     copilot-instructions.md
 
+# Optional test structure when it fits the chosen architecture and technology
+# Examples:
+# /tests/
+#     test_example.py
+# /src/<package>/tests/
+#     test_example.py
+
 /docs/
     START_HERE.md
     tasks.md
@@ -69,6 +76,11 @@ Generate the following documentation‑first structure:
         TASK-COMPLETION-TEMPLATE.md
         TASK-KICKOFF-TEMPLATE.md
 
+# Optional quality structure when applicable
+/tests/
+    # Include a unit test folder when the selected stack has a conventional test location
+    # If omitted, document why and where tests should live later
+
 ---------------------------------------------------------
 GLOBAL META RULES (Apply to ALL files)
 ---------------------------------------------------------
@@ -88,6 +100,11 @@ Code must be regenerable from:
 - Task definitions
 - Tests
 - Domain knowledge
+
+When the selected stack has an established test convention:
+- Include an appropriate starter unit test location
+- Mention the chosen test location in design and tasks documentation
+- If tests are intentionally deferred, document that explicitly
 
 All documentation must:
 - Be written in Markdown
